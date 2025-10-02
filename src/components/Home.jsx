@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CreativeHomePage = () => {
+    const navigate=useNavigate()
+    const logout=()=>{
+        navigate("/register")
+
+    }
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-300 w-screen me-5">
-        <button className='bg-white w-30 h-11 rounded-2xl text-violet-600 font-extrabold mt-4 lg:ms-325 sm:ms-140'>Log out</button>
+        <button onClick={logout} className='bg-white w-30 h-11 rounded-2xl text-violet-600 font-extrabold mt-4 lg:ms-325 sm:ms-140'>Log out</button>
     <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-300 min-h-screen flex items-center justify-center text-white">
       <div className="text-center px-6 py-12 md:px-12">
         
